@@ -1,0 +1,20 @@
+[images]
+  remote_images = [
+    "https://images.unsplash.com/**",
+    "https://cdn.jsdelivr.net/**"
+  ]
+
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+[dev]
+  command = "bun run dev"
+  port = 3000
+  targetPort = 3000
+  framework = "#custom"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
